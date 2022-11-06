@@ -1,8 +1,18 @@
 import React from 'react'
+import style from './todo.module.css'
 
-const Todo = () => {
+const Todo = (props) => {
+  const { id, desc, title } = props.todo;
   return (
-    <div>Todo</div>
+    <article className={style.todo}>
+      <div>
+        <h3>{title}</h3>
+        <p>{desc}</p>
+      </div>
+      <div>
+        <button className='btn'><i className='fa fa-trash fa-2x'></i></button>
+      </div>
+    </article>
   )
 }
 

@@ -1,0 +1,16 @@
+.todo {
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo:hover{
+    background-color: #111;
+}
+
+.btn{
+    color: red;
+    cursor: pointer;
+    background-color: transparent;
+}
