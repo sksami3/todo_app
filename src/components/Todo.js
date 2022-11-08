@@ -4,7 +4,7 @@ import style from './todo.module.css'
 const Todo = (props) => {
 
   const clickHandler = (id) => {
-    alert(id);
+    props.onDeleteToDo(id);
   }
 
   const { desc, title } = props.todo;

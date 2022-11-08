@@ -14,11 +14,17 @@ const Home = () => {
         })
     }
 
+    const deleteToDoHandler = (id) => {
+        setTodos((oldList) => {
+            return oldList.filter((x) => x.id !== id);
+        })
+    }
+
     return (
         <div className={style.container}>
             <h1 style={{ color: "white" }}>TODO App</h1>
             <NewTodo onAddTodo={handleAddTodo} />
-            <Todos todos={todos} />
+            <Todos todos={todos} onDeleteToDo={deleteToDoHandler} />
         </div>
     )
 }
